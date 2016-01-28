@@ -35,11 +35,7 @@ nova-compute-conf:
     - name: {{ salt['pillar.get']('conf_files:nova_compute', default='/etc/nova/nova-compute.conf') }}
     - sections: 
         DEFAULT: 
-{% if 'virt.is_hyper' in salt and salt['virt.is_hyper'] %}
           libvirt_type: kvm
-{% else %}
-          libvirt_type: qemu
-{% endif %}
     - require: 
       - pkg: nova-compute-install
       - pkg: nova-compute-kvm-install
