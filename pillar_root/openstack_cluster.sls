@@ -14,6 +14,6 @@ cluster_type: icehouse
 
 #Hosts and their ip addresses
 hosts: 
-  openstack.icehouse: 104.236.127.135
+  openstack.icehouse: 104.236.148.150
 
 
